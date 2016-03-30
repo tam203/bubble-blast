@@ -6,11 +6,12 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>WebVR Demo by Fintan Kearney</title>
     <meta name="description" content="WebVR Demo by Fintan Kearney">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script type="text/javascript" src="https://rawgit.com/aframevr/aframe/master/dist/aframe-v0.2.0.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
-<a-scene>
+<a-scene class="main-menu">
 
     <!-- BG music -->
     <a-entity sound="src: mp3/pluto.mp3; autoplay: true"></a-entity>
@@ -286,6 +287,9 @@
     <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
     <a-light type="ambient" color="#fff"></a-light>
 
+</a-scene>
+<a-scene id="image-scene" style="display:none">
+    <a-sky class="image-source" src="http://www.nationalgeographic.com/saint-peter-basilica-vatican/Basilica_VR.jpg" rotation="0 -130 0"></a-sky>
 </a-scene>
 </body>
 </html>
