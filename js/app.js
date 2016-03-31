@@ -1,4 +1,5 @@
 var VRApp = angular.module('vrApp', [
+  'ng',
   'ngRoute',
   'vrControllers'
 ]);
