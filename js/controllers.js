@@ -3,6 +3,12 @@ var vrControllers = angular.module('vrControllers', []);
 vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
   function ($scope, $http, $routeParams) {
 
+  $scope.images = [];
+
+  $http.get('images.json').success(function(response) {
+      $scope.images = response.images;
+  });
+
   var scene = document.querySelector('a-scene');
   if (scene) {
     if (scene.hasLoaded) {

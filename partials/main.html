@@ -22,63 +22,71 @@
 
     <!-- Lower row -->
 
-    <a-curvedimage image-url="https://c1.staticflickr.com/1/591/22665222766_07524ca21a_k.jpg" src="https://c1.staticflickr.com/1/591/22665222766_244f36dfc0_t.jpg"  adius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <!-- Future - will introduce ng-repeat for images based on JSON data -->
+    <!--<a-curvedimage  src="flickr/thumbnails/{image}" ng-repeat="image in images" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">-->
+        <!--<a-animation attribute="rotation" from="0 180 0" to="0 350 0" begin="750" dur="1000"></a-animation>-->
+        <!--<a-event name="click" color="#FFC65D"></a-event>-->
+        <!--<a-event name="mouseenter" color="#FFC65D"></a-event>-->
+        <!--<a-event name="mouseleave" color="none"></a-event>-->
+    <!--</a-curvedimage>-->
+
+    <a-curvedimage  src="flickr/thumbnails/{image}" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 350 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3746/9503927685_970b5e141b_k_d.jpg" src="https://farm4.staticflickr.com/3746/9503927685_970b5e141b_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 330 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3917/14646855999_d59e5ce9c5_c.jpg" src="https://farm4.staticflickr.com/3917/14646855999_d59e5ce9c5_m.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 310 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm1.staticflickr.com/661/21230969582_33e91e2a9a_o_d.jpg" src="https://farm1.staticflickr.com/661/21230969582_33e91e2a9a_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 290 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://c2.staticflickr.com/8/7426/12233323463_57606d8e87_k.jpg"  src="https://c2.staticflickr.com/8/7426/12233323463_57606d8e87_m.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 270 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm1.staticflickr.com/648/20938457876_4d0924e380_o_d.jpg" src="https://farm1.staticflickr.com/648/20938457876_4d0924e380_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 250 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://c1.staticflickr.com/9/8820/16523586334_4d22f1754b_k.jpg" src="https://c1.staticflickr.com/9/8820/16523586334_4d22f1754b_m.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 230 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm6.staticflickr.com/5688/21597873406_d19b851a96_o_d.jpg" src="https://farm6.staticflickr.com/5688/21597873406_d19b851a96_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 210 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3876/14634078309_f77e77d6b9_o_d.jpg" src="https://farm4.staticflickr.com/3876/14634078309_f77e77d6b9_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 190 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
@@ -86,28 +94,28 @@
     </a-curvedimage>
 
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3860/14632678619_eb4f89ef85_o_d.jpg" src="https://farm4.staticflickr.com/3860/14632678619_eb4f89ef85_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 170 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3844/14626558247_6aaa566397_o_d.jpg" src="https://farm4.staticflickr.com/3844/14626558247_6aaa566397_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 150 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm8.staticflickr.com/7425/14182933691_af44ff2a43_o_d.jpg" src="https://farm8.staticflickr.com/7425/14182933691_af44ff2a43_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 130 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3946/15595764691_b09a694027_t.jpg" src="https://farm4.staticflickr.com/3946/15595764691_b09a694027_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 110 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
@@ -115,35 +123,35 @@
     </a-curvedimage>
 
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3877/14847119920_7e5e9398e9_o_d.jpg"  src="https://farm4.staticflickr.com/3877/14847119920_7e5e9398e9_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 90 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm9.staticflickr.com/8526/8546879452_2e097547a6_o_d.jpg"  src="https://farm9.staticflickr.com/8526/8546879452_2e097547a6_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 70 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm6.staticflickr.com/5578/14847291760_a1945131e6_o_d.jpg"  src="https://farm6.staticflickr.com/5578/14847291760_a1945131e6_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 50 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm6.staticflickr.com/5595/15030728651_753a31e3ca_o_d.jpg" src="https://farm6.staticflickr.com/5595/15030728651_753a31e3ca_o_d.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 30 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3869/14460157987_e0892869e2_o_d.jpg" src="https://farm4.staticflickr.com/3869/14460157987_e0892869e2_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 0.9 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 10 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
@@ -151,42 +159,42 @@
     </a-curvedimage>
 
     <!-- Upper row -->
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3947/15426357418_9976b269b0_o_d.jpg"  src="https://farm4.staticflickr.com/3947/15426357418_9976b269b0_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 350 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm6.staticflickr.com/5817/21608154473_74bd18c61f_o_d.jpg"  src="https://farm6.staticflickr.com/5817/21608154473_74bd18c61f_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 330 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm6.staticflickr.com/5324/16622294523_67e373a118_o_d.jpg"  src="https://farm6.staticflickr.com/5324/16622294523_67e373a118_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 310 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3734/11368642323_b4be377644_o_d.jpg"  src="https://farm4.staticflickr.com/3734/11368642323_b4be377644_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 290 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3912/15030746921_c030b23b2b_o_d.jpg"  src="https://farm4.staticflickr.com/3912/15030746921_c030b23b2b_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 270 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3899/14847155059_33ccd392b5_o_d.jpg"  src="https://farm4.staticflickr.com/3899/14847155059_33ccd392b5_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 250 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
@@ -196,63 +204,63 @@
 
     <!-- Gap for welcome -->
 
-    <a-curvedimage  image-url="https://c1.staticflickr.com/1547/24151972210_081aeaf891_o_d.jpg"  src="https://c1.staticflickr.com/1547/24151972210_081aeaf891_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 170 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage image-url="https://c1.staticflickr.com/1585/24339263532_4ddae26189_o_d.jpg"  src="https://c1.staticflickr.com/1585/24339263532_4ddae26189_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 150 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://c1.staticflickr.com/1524/24365150991_39fc7c5b35_o_d.jpg"  src="https://c1.staticflickr.com/1524/24365150991_39fc7c5b35_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 130 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://c1.staticflickr.com/1659/24079886189_8a475ff9cd_o_d.jpg"  src="https://c1.staticflickr.com/1659/24079886189_8a475ff9cd_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 110 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3689/13202443445_00c76d4caa_o_d.jpg"  src="https://farm4.staticflickr.com/3689/13202443445_00c76d4caa_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 90 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm4.staticflickr.com/3679/11829226443_ef2a8482d1_o_d.jpg"  src="https://farm4.staticflickr.com/3679/11829226443_ef2a8482d1_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage  src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 70 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm3.staticflickr.com/2939/14486898640_a42a82869b_o_d.jpg"  src="https://farm3.staticflickr.com/2939/14486898640_a42a82869b_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 50 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm8.staticflickr.com/7476/15805694576_e56e29784e_o_d.jpg"  src="https://farm8.staticflickr.com/7476/15805694576_e56e29784e_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 30 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
         <a-event name="mouseleave" color="none"></a-event>
     </a-curvedimage>
 
-    <a-curvedimage  image-url="https://farm3.staticflickr.com/2817/9174896564_88ec346440_o_d.jpg"  src="https://farm3.staticflickr.com/2817/9174896564_88ec346440_t.jpg" radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
+    <a-curvedimage src="flickr/thumbnails/{image}"  radius="5.7" class="vr-image-demo" theta-length="18" height=".8" position="0 1.3 0" scale=".4 .4 .4">
         <a-animation attribute="rotation" from="0 180 0" to="0 10 0" begin="750" dur="1000"></a-animation>
         <a-event name="click" color="#FFC65D"></a-event>
         <a-event name="mouseenter" color="#FFC65D"></a-event>
