@@ -17,7 +17,7 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
   for (i = 0; i < x.length; i++) {
       x[i].addEventListener('click', function () {
           // Only handling images right now
-          if (this.getAttribute("video").length) {
+          if (this.getAttribute("video") && this.getAttribute("video").length) {
              window.location.assign('#/video?url=' + this.getAttribute("video-url"));
           } else {
              window.location.assign('#/image?url=' + this.getAttribute("src"));
