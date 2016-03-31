@@ -17,7 +17,11 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
   for (i = 0; i < x.length; i++) {
       x[i].addEventListener('click', function () {
           // Only handling images right now
-          window.location.assign('#/image?url=' + this.getAttribute("src"));
+          if (this.getAttribute("video").length) {
+             window.location.assign('#/video?url=' + this.getAttribute("video-url"));
+          } else {
+             window.location.assign('#/image?url=' + this.getAttribute("src"));
+          }
       });
   }
 
