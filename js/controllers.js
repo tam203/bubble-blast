@@ -17,7 +17,7 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
   for (i = 0; i < x.length; i++) {
       x[i].addEventListener('click', function () {
           // Only handling images right now
-          window.location.href = '#/image?url=' + this.getAttribute("src");
+          window.location.assign('#/image?url=' + this.getAttribute("src"));
       });
   }
 
@@ -35,6 +35,13 @@ vrControllers.controller('ImageCtrl', ['$scope', '$routeParams',
     }
   }
 
+  // Ensure back functionality works as expected across devices
+  $scope.$on('$routeChangeStart', function (scope, next, current) {
+        if (next.$$route.controller == "ImageCtrl") {
+            window.location.assign('#/home');
+        }
+  });
+
   $scope.image = $routeParams.url;
 }]);
 
@@ -49,6 +56,13 @@ vrControllers.controller('VideoCtrl', ['$scope', '$routeParams',
       scene.addEventListener('loaded', scene.enterVR);
     }
   }
+
+  // Ensure back functionality works as expected across devices
+  $scope.$on('$routeChangeStart', function (scope, next, current) {
+        if (next.$$route.controller == "VideoCtrl") {
+            window.location.assign('#/home');
+        }
+  });
 
   $scope.video = $routeParams.url;
 }]);
