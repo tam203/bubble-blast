@@ -20,7 +20,7 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
           if (this.getAttribute("video") && this.getAttribute("video").length) {
              window.location.assign('#/video?url=' + this.getAttribute("video-url"));
           } else {
-             window.location.assign('#/image?url=' + this.getAttribute("src"));
+             window.location.assign('#/image?url=' + this.getAttribute("image-url"));
           }
       });
   }
