@@ -1,4 +1,4 @@
-# webvr-angular-aframe [![Build Status](https://travis-ci.org/FintanK/webvr-angular-aframe.svg?branch=master)](https://travis-ci.org/FintanK/webvr-angular-aframe)
+# webvr-angular-aframe
 
 Link: http://fintank.github.io/webvr-angular-aframe/index.html
 
