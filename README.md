@@ -1,4 +1,4 @@
-# vr-aframe-viewer
+# vr-aframe-viewer [![Build Status](https://travis-ci.org/FintanK/vr-aframe-viewer.svg?branch=master)](https://travis-ci.org/FintanK/vr-aframe-viewer)
 
 Link: http://fintank.github.io/vr-aframe-viewer/index.html
 
