@@ -1,6 +1,6 @@
-# vr-aframe-viewer [![Build Status](https://travis-ci.org/FintanK/vr-aframe-viewer.svg?branch=master)](https://travis-ci.org/FintanK/vr-aframe-viewer)
+# webvr-angular-aframe [![Build Status](https://travis-ci.org/FintanK/webvr-angular-aframe.svg?branch=master)](https://travis-ci.org/FintanK/webvr-angular-aframe)
 
-Link: http://fintank.github.io/vr-aframe-viewer/index.html
+Link: http://fintank.github.io/webvr-angular-aframe/index.html
 
 This application uses Mozilla's AFRAME to allow the viewing of content that I like from across the VR web.
 I have also introduced Angular, Bower and Grunt. 
