@@ -1,1 +1,14 @@
-
+language: node_js
+node_js:
+  - "5.1"
+before_install:
+  -  npm cache -f clean
+  -  npm install -g bower
+  -  npm install -g grunt-cli
+  -  npm install -g grunt
+  -  npm install
+  -  sudo apt-get install imagemagick
+  -  sudo apt-get install graphicsmagick-imagemagick-compat
+install:
+  - bower install
+before_script: grunt
