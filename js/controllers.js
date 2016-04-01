@@ -56,6 +56,10 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
      return "";
   }
 
+  $scope.viewImage = function(imageURL) {
+    window.location.assign('#/image?url=' + imageURL);
+  }
+
   var scene = document.querySelector('a-scene');
   if (scene) {
     if (scene.hasLoaded) {
@@ -64,14 +68,6 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
       scene.addEventListener('loaded', scene.enterVR);
     }
   }
-
-  var x = document.getElementsByClassName("vr-image");
-        var i;
-        for (i = 0; i < x.length; i++) {
-            x[i].addEventListener('click', function () {
-                   window.location.assign('#/image?url=' + x[i].getAttribute("url"));
-            });
-        }
 
 }]);
 
