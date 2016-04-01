@@ -1,8 +1,14 @@
 # vr-aframe-viewer
 
-This application uses AFRAME to allow the viewing of content on the VR web.
-Open the link below in your VR headset and view the VR image.
-Compatible with Gear VR, Oculus Rift and Google Cardboard.
-http://fintank.github.io/vr-aframe-viewer/index.html
+Link: http://fintank.github.io/vr-aframe-viewer/index.html
 
-Tip: Add the app to your homescreen
+This application uses Mozilla's AFRAME to allow the viewing of content that I like from across the VR web.
+
+VR mode not supported by desktop browsers.
+Compatible with Gear VR, Oculus Rift and Google Cardboard.
+
+# Installation
+
+- Visit the link http://fintank.github.io/vr-aframe-viewer/index.html
+- If visiting from a mobile browser. Add the app to your homescreen.
+- Open the app and off you go!
