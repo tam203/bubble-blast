@@ -1,13 +1,30 @@
 var vrControllers = angular.module('vrControllers', []);
 
+
+
+
 vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
   function ($scope, $http, $routeParams) {
+
+  $scope.upperIndex = [350, 330, 310, 290, 270, 250, 230, 210, 190, 170, 150, 130, 110, 90, 70, 50, 30, 10, 350, 330, 310, 290, 270, 250, 170, 150, 130, 110, 90, 70, 50, 30, 10];
+  $scope.lowerIndex = [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9,0.9,0.9,0.9,0.9,0.9, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3,1.3,1.3,1.3,1.3,1.3];
 
   $scope.images = [];
 
   $http.get('images.json').success(function(response) {
       $scope.images = response.images;
   });
+
+  $scope.getThumbnail = function(url)
+  {
+     if (url)
+     {
+        var index = url.lastIndexOf("/") + 1;
+        var filename = url.substr(index);
+        return 'flickr/thumbnails/flickr/' + filename;
+     }
+     return "";
+  }
 
   var scene = document.querySelector('a-scene');
   if (scene) {
@@ -18,18 +35,13 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
     }
   }
 
-  var x = document.getElementsByClassName("vr-image-demo");
-  var i;
-  for (i = 0; i < x.length; i++) {
-      x[i].addEventListener('click', function () {
-          // Only handling images right now
-          if (this.getAttribute("video") && this.getAttribute("video").length) {
-             window.location.assign('#/video?url=' + this.getAttribute("video-url"));
-          } else {
-             window.location.assign('#/image?url=' + this.getAttribute("image-url"));
-          }
-      });
-  }
+  var x = document.getElementsByClassName("vr-image");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].addEventListener('click', function () {
+                   window.location.assign('#/image?url=' + x[i].getAttribute("url"));
+            });
+        }
 
 }]);
 

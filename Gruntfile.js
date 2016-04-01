@@ -12,20 +12,13 @@ module.exports = function(grunt) {
         responsive_images: {
             dev: {
                 options: {
-                    engine: 'gm'
+                    engine: 'im',
+                    separator: '',
+                    sizes: [{
+                        height: 320,
+                        rename: false
+                    }]
                 },
-                sizes: [{
-                    width: 320,
-                    height: 240
-                },{
-                    name: 'large',
-                    width: 640
-                },{
-                    name: "large",
-                    width: 1024,
-                    suffix: "_x2",
-                    quality: 0.6
-                }],
                 files: [{
                     expand: true,
                     src: ['flickr/*.{jpg,gif,png}'],
@@ -36,7 +29,7 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            tests: ['flickr/*.jpg', 'flickr/thumbnails/*.jpg'],
+            tests: ['flickr/*.jpg', 'flickr/thumbnails/flickr/*.jpg'],
         },
         downloadfile: {
             options: {
@@ -54,7 +47,6 @@ module.exports = function(grunt) {
                     "https://farm4.staticflickr.com/3860/14632678619_eb4f89ef85_o_d.jpg",
                     "https://farm4.staticflickr.com/3844/14626558247_6aaa566397_o_d.jpg",
                     "https://farm8.staticflickr.com/7425/14182933691_af44ff2a43_o_d.jpg",
-                    "https://farm4.staticflickr.com/3946/15595764691_b09a694027_t.jpg",
                     "https://farm4.staticflickr.com/3877/14847119920_7e5e9398e9_o_d.jpg",
                     "https://farm9.staticflickr.com/8526/8546879452_2e097547a6_o_d.jpg",
                     "https://farm6.staticflickr.com/5578/14847291760_a1945131e6_o_d.jpg",
