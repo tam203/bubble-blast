@@ -27,3 +27,8 @@ The project will then be available locally on http://localhost:3000
 - Visit the link http://fintank.github.io/vr-aframe-viewer/index.html
 - If visiting from a mobile browser. Add the app to your homescreen.
 - Open the app and off you go!
+
+
+# To do
+- Loading screens when loading 360 images
+- Video content and section on main menu.
