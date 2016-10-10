@@ -24,7 +24,7 @@ The project will then be available locally on http://localhost:3000
 
 # Try it out
 
-- Visit the link http://fintank.github.io/vr-aframe-viewer/index.html
+- Visit the link http://fintank.github.io/webvr-angular-aframe/index.html
 - If visiting from a mobile browser. Add the app to your homescreen.
 - Open the app and off you go!
 
