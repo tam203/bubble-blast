@@ -1,116 +1,145 @@
 var vrControllers = angular.module('vrControllers', []);
 
-
-
-
-vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
-  function ($scope, $http, $routeParams) {
-
-  $scope.upperIndex = [350, 330, 310, 290, 270, 250, 230, 210, 190, 170, 150, 130, 110, 90, 70, 50, 30, 10, 350, 330, 310, 290, 270, 250, 170, 150, 130, 110, 90, 70, 50, 30, 10];
-  $scope.lowerIndex = [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9,0.9,0.9,0.9,0.9,0.9, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3,1.3,1.3,1.3,1.3,1.3];
-
-  $scope.images = [
-      "https://c1.staticflickr.com/1/591/22665222766_07524ca21a_k.jpg",
-      "https://farm4.staticflickr.com/3746/9503927685_970b5e141b_k_d.jpg",
-      "https://farm1.staticflickr.com/661/21230969582_33e91e2a9a_o_d.jpg",
-      "https://c2.staticflickr.com/8/7426/12233323463_57606d8e87_k.jpg",
-      "https://farm1.staticflickr.com/648/20938457876_4d0924e380_o_d.jpg",
-      "https://c1.staticflickr.com/9/8820/16523586334_4d22f1754b_k.jpg",
-      "https://farm6.staticflickr.com/5688/21597873406_d19b851a96_o_d.jpg",
-      "https://farm4.staticflickr.com/3876/14634078309_f77e77d6b9_o_d.jpg",
-      "https://farm4.staticflickr.com/3860/14632678619_eb4f89ef85_o_d.jpg",
-      "https://farm4.staticflickr.com/3844/14626558247_6aaa566397_o_d.jpg",
-      "https://farm8.staticflickr.com/7425/14182933691_af44ff2a43_o_d.jpg",
-      "https://farm4.staticflickr.com/3877/14847119920_7e5e9398e9_o_d.jpg",
-      "https://farm9.staticflickr.com/8526/8546879452_2e097547a6_o_d.jpg",
-      "https://farm6.staticflickr.com/5578/14847291760_a1945131e6_o_d.jpg",
-      "https://farm6.staticflickr.com/5595/15030728651_753a31e3ca_o_d.jpg",
-      "https://farm4.staticflickr.com/3869/14460157987_e0892869e2_o_d.jpg",
-      "https://farm4.staticflickr.com/3947/15426357418_9976b269b0_o_d.jpg",
-      "https://farm6.staticflickr.com/5817/21608154473_74bd18c61f_o_d.jpg",
-      "https://farm6.staticflickr.com/5324/16622294523_67e373a118_o_d.jpg",
-      "https://farm4.staticflickr.com/3734/11368642323_b4be377644_o_d.jpg",
-      "https://farm4.staticflickr.com/3912/15030746921_c030b23b2b_o_d.jpg",
-      "https://farm4.staticflickr.com/3899/14847155059_33ccd392b5_o_d.jpg",
-      "https://c1.staticflickr.com/1547/24151972210_081aeaf891_o_d.jpg",
-      "https://c1.staticflickr.com/1585/24339263532_4ddae26189_o_d.jpg",
-      "https://c1.staticflickr.com/1524/24365150991_39fc7c5b35_o_d.jpg",
-      "https://c1.staticflickr.com/1659/24079886189_8a475ff9cd_o_d.jpg",
-      "https://farm4.staticflickr.com/3689/13202443445_00c76d4caa_o_d.jpg",
-      "https://farm4.staticflickr.com/3679/11829226443_ef2a8482d1_o_d.jpg",
-      "https://farm3.staticflickr.com/2939/14486898640_a42a82869b_o_d.jpg",
-      "https://farm8.staticflickr.com/7476/15805694576_e56e29784e_o_d.jpg",
-      "https://farm3.staticflickr.com/2817/9174896564_88ec346440_o_d.jpg",
-      "https://farm8.staticflickr.com/7476/15805694576_e56e29784e_o_d.jpg",
-      "https://farm3.staticflickr.com/2817/9174896564_88ec346440_o_d.jpg"
-  ];
-
-  $scope.getThumbnail = function(url)
-  {
-     if (url)
-     {
-        var index = url.lastIndexOf("/") + 1;
-        var filename = url.substr(index);
-        return 'flickr/thumbnails/flickr/' + filename;
-     }
-     return "";
+function guid() {
+  // Taken with thanks from Jon Surrell
+  // http://stackoverflow.com/a/105074
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
   }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+    s4() + '-' + s4() + s4() + s4();
+}
 
-  $scope.viewImage = function(imageURL) {
-    window.location.assign('#/image?url=' + imageURL);
-  }
 
-  var scene = document.querySelector('a-scene');
-  if (scene) {
-    if (scene.hasLoaded) {
-      scene.enterVR();
-    } else {
-      scene.addEventListener('loaded', scene.enterVR);
+
+
+vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams', '$timeout',
+
+  function ($scope, $http, $routeParams,$timeout) {
+
+    $scope.balls = [];
+
+    for (var i = 0; i < 3; i++) {
+      addBall();
     }
-  }
 
-}]);
+    $scope.getColour = (ball) => {
+      return '#' + toColour(ball.x) + toColour(ball.y) + toColour(ball.z);
+    };
 
-vrControllers.controller('ImageCtrl', ['$scope', '$routeParams',
-  function ($scope, $routeParams) {
-
-  var scene = document.querySelector('a-scene');
-  if (scene) {
-    if (scene.hasLoaded) {
-      scene.enterVR();
-    } else {
-      scene.addEventListener('loaded', scene.enterVR);
+    function toColour(pos){
+      var hex = Math.floor((pos * pos )% 256).toString(16);
+      return (hex.length > 1) ? hex : '0' + hex;
     }
-  }
 
-  // Ensure back functionality works as expected across devices
-  $scope.$on('$routeChangeStart', function (scope, next, current) {
-        if (next.$$route.controller == "ImageCtrl") {
-            window.location.assign('#/home');
+    function addBall() {
+      const MAX_POS = 10;
+      var ball = {
+        x: (Math.random() - 0.5) * 2 * MAX_POS,
+        y: (Math.random() - 0.5) * 2 * MAX_POS,
+        z: (Math.random() - 0.5) * 2 * MAX_POS,
+        speed: getSpeed(),
+        id:'ball_'+guid()
+      };
+      $scope.balls.push(ball);
+    }
+
+    function maybeSpawnBall() {
+      const SPAWN_FREQ = 0.5;
+      if(Math.random() < SPAWN_FREQ){
+        addBall();
+      }
+    }
+
+    function getSpeed(){
+      const MAX_SPEED = 0.03;
+      return [1, 1, 1].map((i)=>(Math.random() - 0.5) * 2 * MAX_SPEED)
+    }
+
+    // Make the balls move somewhat at random
+    function changeDir(){
+      const CHANGE_FREQ = 0.5;
+      for (var i = 0; i < $scope.balls.length; i++) {
+        var ball = $scope.balls[i];
+        if(Math.random() < CHANGE_FREQ){
+          ball.speed = getSpeed()
         }
-  });
-
-  $scope.image = $routeParams.url;
-}]);
-
-vrControllers.controller('VideoCtrl', ['$scope', '$routeParams',
-  function ($scope, $routeParams) {
-
-  var scene = document.querySelector('a-scene');
-  if (scene) {
-    if (scene.hasLoaded) {
-      scene.enterVR();
-    } else {
-      scene.addEventListener('loaded', scene.enterVR);
+      }
     }
-  }
 
-  // Ensure back functionality works as expected across devices
-  $scope.$on('$routeChangeStart', function (scope, next, current) {
-        if (next.$$route.controller == "VideoCtrl") {
-            window.location.assign('#/home');
+    // update the balls position. Doesn't take account of frame rate, very crude.
+    function move(){
+      for (var i = 0; i < $scope.balls.length; i++) {
+        var ball = $scope.balls[i];
+        ball.x = ball.x + ball.speed[0];
+        ball.y = ball.y + ball.speed[1];
+        ball.z = ball.z + ball.speed[2];
+      }
+    }
+
+    // Using a move loop and event's loop.
+    // events loop just happens less frequently, trying to save some cycles.
+    // Should use a proper game loop here!
+    function moveLoop(){
+      move();
+      $timeout(moveLoop);
+    }
+    moveLoop();
+
+    function eventsLoop(){
+      changeDir();
+      maybeSpawnBall();
+      $timeout(eventsLoop, 300)
+    }
+    eventsLoop();
+
+
+    function pop(ele){
+      var id = ele.id;
+      ele.components.sound.playSound();
+      // `pop` the ball by making transparent but give the sound time to play before removing.
+      ele.setAttribute('material', 'opacity', '0');
+      $timeout(()=>removeBall(id), 300);
+    }
+
+    function removeBall(id){
+      var found = -1;
+      for (var i = 0; i < $scope.balls.length; i++) {
+        var ball = $scope.balls[i];
+        if (ball.id === id) {
+          found = i;
+          break;
         }
-  });
+      }
+      if(found !== -1){
+        $scope.balls.splice(found, 1);
+      }
+    }
 
-  $scope.video = $routeParams.url;
-}]);
+
+
+    // Component to change to random color on click.
+    // TODO: rather than muck around with timeout can we use a fuse cursor?
+    var tracker = {};
+    AFRAME.registerComponent('ball', {
+      init: function () {
+        if(this.el.id.substr(0, 4) === 'ball') {
+          this.el.addEventListener('mouseenter', function () {
+            tracker[this.id] = setTimeout((() => {
+              var ele = this;
+              return () =>pop(ele)
+            })(), 500)
+          });
+          this.el.addEventListener('mouseleave', function () {
+            var timeout = tracker[this.id];
+            if (timeout){
+              clearTimeout(timeout);
+            }
+          });
+        }
+      }
+    });
+
+  }]);

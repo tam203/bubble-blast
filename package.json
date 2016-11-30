@@ -1,6 +1,7 @@
 {
   "name": "WebVR",
   "version": "1.0.0",
+  "scripts":{"bower":"bower", "serve":"node server.js"},
   "dependencies": {
     "bowser": "^0.7.2",
     "compass": "^0.1.0",
@@ -14,6 +15,7 @@
     "grunt-cli": "~1.1.0"
   },
   "devDependencies": {
+    "bower": "^1.8.0",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-downloadfile": "^0.3.2",
     "grunt-responsive-images": "^0.1.7"
