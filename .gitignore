@@ -2,3 +2,4 @@ node_modules/*
 flickr/*.jpg
 .idea/*
 npm-debug.log
+*.iml
