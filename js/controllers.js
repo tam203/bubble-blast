@@ -36,10 +36,13 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams', '$t
 
     function addBall() {
       const MAX_POS = 10;
+      const MAX_SIZE = 3;
+      const MIN_SIZE = 0.5;
       var ball = {
         x: (Math.random() - 0.5) * 2 * MAX_POS,
         y: (Math.random() - 0.5) * 2 * MAX_POS,
         z: (Math.random() - 0.5) * 2 * MAX_POS,
+        r: (MAX_SIZE - MIN_SIZE)* Math.random() + MIN_SIZE,
         speed: getSpeed(),
         id:'ball_'+guid()
       };
@@ -90,7 +93,9 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams', '$t
 
     function eventsLoop(){
       changeDir();
-      maybeSpawnBall();
+      if($scope.balls.length < 30){
+        maybeSpawnBall();
+      }
       $timeout(eventsLoop, 300)
     }
     eventsLoop();
