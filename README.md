@@ -3,7 +3,7 @@
 A experiment with WebVR
 ## With thanks / credit to
 * [FintanK](https://github.com/FintanK) - This repo was forked from [webvr-angular-aframe](https://github.com/FintanK/webvr-angular-aframe) to get me started.
-* [Jon Surrell](http://stackoverflow.com/users/1432801) - For [a Stack overflow answer oon uuids](http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript/105074#105074).
+* [Jon Surrell](http://stackoverflow.com/users/1432801) - For [a Stack overflow answer on uuids](http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript/105074#105074).
 * [Mark DiAngelo and soundbible.com](http://soundbible.com/2067-Blop.html) - For the lovely blop/pop sound.
 
 
