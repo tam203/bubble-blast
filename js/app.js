@@ -11,14 +11,6 @@ VRApp.config(['$routeProvider',
         templateUrl: 'partials/main.html',
         controller: 'MainMenuCtrl'
       }).
-      when('/image', {
-        templateUrl: 'partials/360image.html',
-        controller: 'ImageCtrl'
-      }).
-      when('/video', {
-        templateUrl: 'partials/360video.html',
-        controller: 'VideoCtrl'
-      }).
       otherwise({
         redirectTo: '/home'
       });
