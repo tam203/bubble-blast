@@ -17,9 +17,12 @@ In the root directory..
 
 The project will then be available locally on http://localhost:3000
 
+## Watch out!!!
+Watch out!!! I've hacked the webvr DPDB cache to not look online and to find my device.
+You are likely to get better results running with the remote version of aframe.js rather than the one in this repo. Just uncomment it in `index.html` and comment over the local version. 
+
 ## Try it out
 
 - Visit the link https://tam203.github.io/bubble-blast/
 - If visiting from a mobile browser. Add the app to your homescreen.
 - Open the app and off you go!
-

@@ -52601,7 +52601,7 @@ function CardboardVRDisplay() {
   this.distorter_ = null;
   this.cardboardUI_ = null;
 
-  this.dpdb_ = new Dpdb(true, this.onDeviceParamsUpdated_.bind(this));
+  this.dpdb_ = new Dpdb(false, this.onDeviceParamsUpdated_.bind(this));
   this.deviceInfo_ = new DeviceInfo(this.dpdb_.getDeviceParams());
 
   this.viewerSelector_ = new ViewerSelector();
@@ -54776,6 +54776,7 @@ Dpdb.prototype.calcDeviceParams_ = function() {
 Dpdb.prototype.matchRule_ = function(rule, ua, screenWidth, screenHeight) {
   // We can only match 'ua' and 'res' rules, not other types like 'mdmh'
   // (which are meant for native platforms).
+  console.log(rule, ua);
   if (!rule.ua && !rule.res) return false;
 
   // If our user agent string doesn't contain the indicated user agent string,
