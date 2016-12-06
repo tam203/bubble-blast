@@ -53079,7 +53079,6 @@ var DEFAULT_RIGHT_CENTER = {x: 0.5, y: 0.5};
  */
 function DeviceInfo(deviceParams) {
   this.viewer = Viewers.CardboardV2;
-  alert("device " + JSON.stringify(deviceParams))
   this.updateDeviceParams(deviceParams);
   this.distortion = new Distortion(this.viewer.distortionCoefficients);
 }
@@ -53687,7 +53686,7 @@ var DPDB_CACHE = {
     "rules": [
       { "ua": "Moto G (4)" }
     ],
-    "dpi": 10000.0,
+    "dpi": 401.0,
     "bw": 4,
     "ac": 1000
   },
