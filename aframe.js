@@ -53685,7 +53685,7 @@ var DPDB_CACHE = {
   {
     "type": "android",
     "rules": [
-      { "mdmh": "*/Moto G*/*" }
+      { "ua": "Moto G (4)" }
     ],
     "dpi": 10000.0,
     "bw": 4,
